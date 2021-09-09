@@ -1,0 +1,36 @@
+
+<div class="main-div">
+<mat-card>
+<h1>Conoce el TNA, el interes simple y compuesto de tu capital! </h1>
+<form class="example-form" [formGroup]="formulario">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Capital</mat-label>
+    <input matInput placeholder="capital" type="number" value="" formControlName="capital">
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill" >
+    <mat-label>Interés</mat-label>
+    <input matInput placeholder="interés" type="number" value="" formControlName="interes">
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill" >
+    <mat-label>Período</mat-label>
+    <input matInput placeholder="período" type="number" value="" formControlName="periodo">
+  </mat-form-field>
+
+</form>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>
+    <mat-card>
+      <mat-card-title><h3>Interés simple:</h3></mat-card-title>
+      <mat-card-content><h1>{{totalSimple }}</h1></mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card>
+      <mat-card-title><h3>Interés compuesto:</h3></mat-card-title>
+      <mat-card-content><h1>{{totalCompuesto }}</h1></mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+</mat-card>
+</div>
